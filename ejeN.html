@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio Basico</title>
+        <link rel="stylesheet" href="EJE_CSS/ejeN.css">
+        <h1>
+            Tirso Biardo - Ejercicio Basico
+        </h1>
+    </head>
+    <body>
+        <button onclick="cambiarColor()">Cambiar color</button>
+    </body>
+    <style>
+        h1 {
+            color: rgb(28, 128, 157);
+            font-size: 2em;
+            text-align: center;
+            margin: 20px;
+            border: #000;
+        }
+        body {
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+
+        }
+        button {
+            background-color: #3721a0; /*Color de fondo*/
+            border: 2px solid #afa1f4; /*Color del borde*/
+            border-radius: 12px; /*Esquinas redondeadas*/
+            color: white; /*Color del texto*/
+            display: inline-block; /*Mostrar como bloque en línea*/
+            font-size: 16px; /*Tamaño de fuente*/
+            overflow: hidden; /*Evitar desbordamiento*/
+            padding: 12px 30px; /*Espaciado interno*/
+            text-align: center; /*Alinear texto al centro*/
+            text-decoration: aquamarine; /*Sin subrayado*/      
+            margin: 4px 2px; /*Espaciado*/
+            cursor: pointer; /*Cambiar cursor al pasar por encima*/
+            transition: background-color 0.3s, color 0.3s;
+            }
+            button:hover {
+                background-color: #8e9acf;
+                color: #3721a0;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <script>
+        function cambiarColor() {
+            const colores = ['#red', '#33FF57', '#3357FF', '#F0F033', '#FF33F0'];
+            const randomColor = colores[Math.floor(Math.random() * colores.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+        function colorOpuesto(hex) {
+            // Elimina el # si está presente
+            hex = hex.replace('#', '');
+            // Si es un nombre de color, retorna blanco
+            if (hex.length !== 6) return '#FFFFFF';
+            // Convierte a RGB
+            const r = 255 - parseInt(hex.substring(0, 2), 16);
+            const g = 255 - parseInt(hex.substring(2, 4), 16);
+            const b = 255 - parseInt(hex.substring(4, 6), 16);
+            // Devuelve el color opuesto en formato hexadecimal
+            return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
+        }
+
+        function cambiarColor() {
+            const colores = ['#FF3333', '#33FF57', '#3357FF', '#F0F033', '#FF33F0'];
+            const randomColor = colores[Math.floor(Math.random() * colores.length)];
+            document.body.style.backgroundColor = randomColor;
+            document.querySelector('h1').style.color = colorOpuesto(randomColor);
+        }
+    </script>
+</html>
