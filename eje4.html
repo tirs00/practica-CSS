@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Diseño de Página Web</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <h1>Logotipo</h1>
+    <nav>
+      <a href="#">LoremIpsumDolorSitAmet</a>
+      <form>
+        <input type="text" placeholder="Buscar">
+        <button type="submit">Buscar</button>
+      </form>
+    </nav>
+  </header>
+
+  <!-- Contenedor principal -->
+  <div class="contenedor">
+    <!-- Columna izquierda -->
+    <aside class="izquierda">
+      <section class="noticias">
+        <h2>Noticias</h2>
+        <ul>
+          <li>dd/mm/aaaa <a href="#">Lorem ipsum dolor sit amet</a></li>
+          <li>dd/mm/aaaa <a href="#">Consectetuer adipiscing elit</a></li>
+          <li>dd/mm/aaaa <a href="#">Donec molestie nunc eu sapien</a></li>
+          <li>dd/mm/aaaa <a href="#">Maecenas aliquam dolor eget metus</a></li>
+          <li>dd/mm/aaaa <a href="#">Fusce tristique lorem id metus</a></li>
+        </ul>
+      </section>
+
+      <section class="enlaces">
+        <h2>Enlaces relacionados</h2>
+        <ul>
+          <li><a href="#">Proin placerat</a></li>
+          <li><a href="#">Nulla in felis</a></li>
+          <li><a href="#">Nam lectus</a></li>
+        </ul>
+      </section>
+
+      <section class="publicidad">
+        <h2>Publicidad</h2>
+        <p>Etiam fermentum, nisl tincidunt blandit interdum, massa velit posuere dolor, sed euismod sem odio at mi.</p>
+        <p>Duis porta placerat arcu. Nullam felis pede, commodo vel, suscipit a, molestie vel, felis.</p>
+        <p>Maecenas mattis est vel est.</p>
+        <a href="#">Seguir leyendo...</a>
+      </section>
+    </aside>
+
+    <!-- Columna central -->
+    <main>
+      <article>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+        <img src="placeholder.png" alt="Imagen">
+        <p>Lorem est lacus, ... Quisque eget ipsum.</p>
+        <a href="#">Seguir leyendo...</a>
+      </article>
+
+      <article>
+        <h2>Vivamus lobortis turpis ac ante fringilla faucibus</h2>
+        <img src="placeholder.png" alt="Imagen">
+        <p>Quisque eget ipsum... <br> Sed fermentum cursus dolor.</p>
+        <a href="#">Seguir leyendo...</a>
+      </article>
+    </main>
+
+    <!-- Columna derecha -->
+    <aside class="derecha">
+      <section>
+        <h3>Phasellus blandit</h3>
+        <p>Praesent sodales imperdiet augue... <a href="#">Seguir leyendo...</a></p>
+      </section>
+
+      <section>
+        <h3>Nullam vel turpis</h3>
+        <p>Donec commodo... <a href="#">Seguir leyendo...</a></p>
+      </section>
+    </aside>
+
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    <nav>
+      <a href="#">Nulla</a> |
+      <a href="#">Pharetra</a> |
+      <a href="#">Luctus</a> |
+      <a href="#">Ipsum</a> |
+      <a href="#">Proin</a> |
+      <a href="#">Placerat</a>
+    </nav>
+    <p>&copy; Copyright Lorem ipsum</p>
+  </footer>
+
+</body>
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+header {
+  background-color: #e6e6ff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  color: #cc6600;
+  font-size: 3em;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header nav a {
+  color: #0033cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header form input {
+  padding: 5px;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  gap: 20px;
+  padding: 20px;
+}
+
+aside.izquierda {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+aside.izquierda section,
+aside.derecha section {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+aside.izquierda h2,
+aside.derecha h3 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #0033cc;
+  text-decoration: underline;
+}
+
+aside.izquierda .publicidad {
+  background-color: #fff3cc;
+}
+
+aside.izquierda .publicidad h2 {
+  color: #cc6600;
+  text-decoration: none;
+}
+
+aside.izquierda ul,
+aside.izquierda li {
+  list-style: none;
+  font-size: 0.9em;
+  line-height: 1.4em;
+}
+
+aside.izquierda a,
+aside.derecha a {
+  color: #0033cc;
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+main article {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+main article h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+main article img {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+main article p {
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+aside.derecha {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+aside.derecha section {
+  background-color: #fff0e6;
+  border-left: 5px solid #cc6600;
+}
+
+aside.derecha h3 {
+  color: #cc6600;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+footer nav a {
+  margin-right: 10px;
+  color: #0033cc;
+  text-decoration: none;
+}
+
+</style>>
+</html>
